@@ -7,8 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AppListComponent {
 	@Input() data: any;
+	arr: any;
   constructor(){
-    
+    this.arr=[];
   }
   ngOnInit(){
 
