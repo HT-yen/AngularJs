@@ -4,4 +4,9 @@
     {{member}}
   </li>
 </ul> -->
-<ul id="show"></ul>
+<ul id="show">
+	<li *ngFor="let item of data">
+	       {{item}}
+	     <!--   <button (click)="deleteMember(member)">Delete</button> -->
+	    </li>
+</ul>

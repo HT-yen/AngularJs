@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'form-root',
@@ -6,6 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppFormComponent {
+  @Output() result: EventEmitter<any> = new EventEmitter();
+  name: string;
+
+  constructor(){
+
+  }
+
+  ngOnInit(){
+
+  }
+
+  newMember(){
+    this.result.emit(this.name);
+  }
+
+
+
+  /*
   show :any;
   newMem: any;
   name: string;
@@ -39,4 +57,6 @@ export class AppFormComponent {
            
           this.show.removeChild(parentDel);
     }
+    */
+
 }

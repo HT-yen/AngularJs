@@ -1,2 +1,2 @@
-<form-root></form-root>
-<list-root></list-root>
+<form-root (result)=pushMember($event)></form-root>
+<list-root [data] = "members"></list-root>
