@@ -1,0 +1,12 @@
+<h3>MEMBERS</h3>
+<!-- <ul id = "show">
+  <li>
+    {{member}}
+  </li>
+</ul> -->
+<ul id="show">
+	<li *ngFor= "let item of data, let i = index">
+	       {{item}}
+	       <button (click)="deleteMember(i)">Delete</button>
+	    </li>
+</ul>
