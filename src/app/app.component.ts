@@ -15,10 +15,14 @@ export class AppComponent implements OnInit{
   }
   ngOnInit(){
   	console.log(this.listcomp.data);
-  	this.members.push("AA");
   }
   pushMember(txt: any){
   	this.members.push(txt);
   	this.listcomp.data =this.members;
   }
+  deleteMember(i: number){
+    this.members.splice(i, 1);
+    this.listcomp.data =this.members;
+  }
 }
+

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'list-root',
@@ -7,11 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AppListComponent {
 	@Input() data: any;
-	arr: any;
+  @Output() resultAfterDelete: EventEmitter<any> = new EventEmitter<any>();
   constructor(){
-    this.arr=[];
   }
   ngOnInit(){
 
   }
+  deleteMember(i: number){
+    this.resultAfterDelete.emit(i);
+  }
+
 }
