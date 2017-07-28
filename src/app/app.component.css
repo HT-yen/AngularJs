@@ -1,0 +1,18 @@
+.game{
+	color: red;
+}
+.android{
+	color: blue;
+}
+.dataEmpty{
+	font-style: italic;
+	color: #2EC0B9;
+}
+.name{
+	display: block;
+	font-size: 20px;
+}
+.detail{
+	background-color: #AFDCD1;
+	margin-left: 10%;
+}
