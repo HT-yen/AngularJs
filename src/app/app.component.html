@@ -9,7 +9,7 @@
             <td>Action</td>
         </tr>
         <tr *ngFor=" let item of trainers, let i = index" height=50>
-            <td>
+            <td class="text-center">
                 <template [ngIf]="item.avatar">
                     <img src="{{item.avatar}}" widtd="50px" height="50px">
                 </template>
@@ -17,23 +17,24 @@
                     Empty
                 </template>
             </td>
-            <td>{{item.name}}</td>
-            <td [emptyData]="item.birthday"></td>
-            <td [ngClass]= "{game: item.team == 'game', android: item.team=='android'}">
+            <td class="text-center">{{item.name}}</td>
+            <td class="text-center" [emptyData]="item.birthday"></td>
+            <td class="text-center" [ngClass]= "{game: item.team == 'game', android: item.team
+            =='android'}">
                 {{item.team}}
             </td>
-            <td>
-            <button (click)="showDetail(i)" class="btn btn-xs">Show</button>
+            <td class="text-center">
+            <button (click)="showDetail(i)" class="btn btn-xs btn-success">Show</button>
             </td>
         </tr>
     </table>
 
     <div class="col-md-4 detail">
         <h2>Detail</h2>
-        <div *ngIf="showmem">
+        <div *ngIf ="showmem">
             <b class="name">{{showmem.name}}</b>
-            <p [emptyData]="showmem.birthday"></p>
-            <p [emptyData]="showmem.team"></p>  
+            <p [emptyData] ="showmem.birthday"></p>
+            <p [emptyData] ="showmem.team"></p>  
         </div>
     </div>
 </div>

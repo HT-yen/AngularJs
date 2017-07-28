@@ -11,7 +11,7 @@ export class EmptyDirective {
   ngOnInit() {
     if(!this.emptyData){
       this.el.nativeElement.innerHTML = "Empty";
-      this.el.nativeElement.className = "dataEmpty";
+      this.el.nativeElement.className = "dataEmpty text-center";
     }
     else{
     this.el.nativeElement.innerHTML = this.emptyData;
