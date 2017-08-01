@@ -1,0 +1,8 @@
+<div class="col-md-4 detail">
+    <div *ngIf ="showmem">
+        <img src="{{ showmem.avatar | image}}" width="100px" alt= "{{showmem.avatar}}">
+        <b class="name">{{showmem.name}}</b>
+        <p [emptyData] ="showmem.birthday"></p>
+        <p [emptyData] ="showmem.team"></p>  
+        </div>
+</div>
