@@ -1,0 +1,25 @@
+<form>
+	    <table class="col-md-6" border="1" bordercolor='#2BC4E2'>
+        <tr>
+            <td>Avatar</td>
+            <td>Name</td>
+            <td>Birthday</td>
+            <td>Team</td>
+            <td>Action</td>
+        </tr>
+        <tr *ngFor=" let item of trainers, let i = index" height=50>
+            <td class="text-center">
+                <img src="{{ item.avatar | image }}" width="50px" height="50px">
+            </td>
+            <td class="text-center">{{item.name}}</td>
+            <td class="text-center" [emptyData]="item.birthday"></td>
+            <td class="text-center" [ngClass]= "{game: item.team == 'game', android: item.team
+            =='android'}">
+                {{item.team}}
+            </td>
+            <td class="text-center">
+            <button (click)="showDetail(i)" class="btn btn-xs btn-success">Show</button>
+            </td>
+        </tr>
+    </table>
+</form>
