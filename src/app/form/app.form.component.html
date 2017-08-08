@@ -1,0 +1,51 @@
+<form [formGroup]="addForm" (ngSubmit)="add(addForm)" novalidate>
+    <div class="group">
+        <fieldset formGroupName="personal">
+            <legend>Personal</legend>
+            <label for="avatar">Avatar</label>
+            <input type="text" formControlName="avatar">
+            <label for="name">Name</label>
+            <input type="text" formControlName="name">
+            <label for="birthday">Birthday</label>
+            <input type="text" formControlName="birthday">
+        </fieldset>
+    </div>
+    <div class="group">
+        <fieldset formGroupName="company">
+            <legend>Company</legend>
+            <label for="joined">Joined</label>
+            <input type="text" formControlName="joined">
+            <label for="team">Team</label>
+            <select formControlName="team">
+                <option *ngFor = "let item of team" value="{{item}}">{{item}}</option>
+            </select>
+        </fieldset>
+    </div>
+    <div class="group">
+    <label for="skill">Skill: </label>
+    <input type="text" formControlName="skill" name="skill" class="skill">
+    <button class="submit" type="submit" [disabled] = "!addForm.valid" >Add</button>
+    </div>
+</form>
+
+<table class="col-md-6" border="1" bordercolor='#2BC4E2'>
+        <tr>
+            <td>Avatar</td>
+            <td>Name</td>
+            <td>Birthday</td>
+            <td>Joined</td>
+            <td>Team</td>
+            <td colspan="2">Action</td>
+        </tr>
+        <tr *ngFor=" let itemmem of trainers, let i = index" height=50>
+            <td class="text-center">
+                <img src="{{itemmem.personal.avatar}}" width="50px" height="50px">
+            </td>
+            <td class="text-center">{{itemmem.personal.name}}</td>
+            <td class="text-center">{{itemmem.personal.birthday}}</td>
+            <td class="text-center">{{itemmem.company.joined}}</td>
+            <td class="text-center">{{itemmem.company.team}}</td>
+            <td><button  (click)="edit(itemmem)">Edit</button></td>
+            <td><button  (click)= "delete(itemmem)">Delete</button></td>
+        </tr>
+</table>
