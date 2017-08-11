@@ -1,0 +1,12 @@
+.list_show {
+  display: inline-block;
+  margin-left: 37%;
+  margin-top: 50px;
+}
+
+
+
+td {
+	width: 100px;
+	height: 50px;
+}

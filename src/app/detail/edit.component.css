@@ -1,0 +1,15 @@
+.container {
+	display: inline-block;
+	width: 50%;
+}
+
+input {
+	display: block;
+}
+
+img {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-size: cover;
+}

@@ -1,0 +1,28 @@
+.nav_bar {
+	display: inline-block;
+	width: 20%;
+	margin-left: 40%;
+	background: #EDD2BE;
+	border: 1px double #420F0F;
+	height: 40px;
+	position: relative;
+}
+
+li {
+	position: absolute;
+	top: 10%;
+	width: 35%;
+	height: 80%;
+	background: url('/assets/button.png');
+	background-size: cover;
+	margin-left: 30%;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+li a{
+	position: absolute;
+	margin-left: 5%;
+	transform: translateY(40%);
+	color: white;
+}
